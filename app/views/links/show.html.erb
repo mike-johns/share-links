@@ -1,8 +1,21 @@
+<% content_for :title do %>Results<% end %>
 <div class="row">
-  <div class="small-6 small-centered columns">
-    <p><strong>Source URL: </strong><%= @link.source %></p>
-    <p><strong>Comment: </strong><%= @link.comment %></p>
-    <p><strong>Twitter: </strong><%= @link.twitter %></p>
-    <!-- TODO: replace click-to-tweet etc buttons with social logos using @link.title -->
+  <div class="small-12 medium-8 small-centered columns">
+    <p>
+      <strong>Source URL: </strong><br>
+      <span class="code-text"><%= @link.source %></span>
+    </p>
+    <p>
+      <strong>Comment:</strong><br>
+      <span class="code-text"><%= @link.comment %></span>
+    </p>
+    <p>
+      <strong>Twitter Link:</strong><br>
+      <span class="code-text"><%= @link.twitter_link %></span>
+    </p>
+    <p>
+      <strong>Twitter </strong><span class="code-text">anchor</span><strong> Tag:</strong><br>
+      <span class="code-text"><%= @link.twitter_anchor %></span>
+    </p>
   </div>
 </div>

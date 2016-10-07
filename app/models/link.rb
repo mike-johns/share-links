@@ -1,13 +1,9 @@
 class Link < ApplicationRecord
-  def twitter
+  def twitter_link
     "https://twitter.com/intent/tweet?text=#{comment.gsub(/[\s]/, "%20")}&url=#{source}"
   end
 
-  def twitter_button
+  def twitter_anchor
     
-  end
-
-  def facebook
-
   end
 end

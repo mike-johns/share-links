@@ -1,7 +1,7 @@
 <% content_for :title do %>New Link<% end %>
 <div class="row">
-  <div class="small-6 small-centered columns">
-    <h1 class="text-center">New Share Link</h1>
+  <div class="small-12 medium-8 small-centered columns">
+    <h1 class="text-center">Social Share Links</h1>
     <%= form_for :link, url: links_path do |f| %>
       <p>
         <%= f.label :source %><br>
@@ -9,17 +9,17 @@
       </p>
 
       <p>
-        <%= f.label :comment %><br>
+        <%= f.label :comment %>
+        <em id="comment-length">116 Characters Remaining</em><br>
         <%= f.text_field :comment %>
         <%# TODO: realtime length validation for comment < 116 characters %>
       </p>
 
       <p>
-        <%= f.label :title %><br>
-        <%= f.text_field :title %>
+        <%= f.label :title %>
+        <em>For HTML Link</em><br>
+        <%= f.text_field :title, value: "Tweet This" %>
       </p>
-
-      <%# TODO: Add switches using class: 'switch radius' to select Twitter or FB %>
 
       <p>
         <%= f.submit class: 'button' %>
