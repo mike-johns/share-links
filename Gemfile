@@ -49,5 +49,5 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # Frontend framework
-gem 'foundation-rails'
+gem 'foundation-rails', '~> 5.5'
 gem 'simple_form'
