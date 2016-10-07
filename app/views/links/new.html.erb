@@ -1,1 +1,17 @@
-<h1>Generate new link here</h1>
+<% content_for :title do %>New Link<% end %>
+<h1>New Share Link</h1>
+<%= form_for :link, url: links_path do |f| %>
+  <p>
+    <%= f.label :source %><br>
+    <%= f.text_field :source %>
+  </p>
+
+  <p>
+    <%= f.label :comment %><br>
+    <%= f.text_field :comment %>
+  </p>
+
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
