@@ -51,3 +51,8 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 # Frontend framework
 gem 'foundation-rails', '~> 5.5'
 gem 'simple_form'
+
+group :production do
+  gem 'pg'
+  gem 'rails_12factor'
+end
