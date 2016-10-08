@@ -4,6 +4,8 @@ class Link < ApplicationRecord
   end
 
   def twitter_anchor
-    
+    <<-HEREDOC
+    <a href="#{twitter_link}">#{title}</a>
+    HEREDOC
   end
 end
